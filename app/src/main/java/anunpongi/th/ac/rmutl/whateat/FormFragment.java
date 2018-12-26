@@ -53,6 +53,7 @@ public class FormFragment extends Fragment {
         Spinner spinner = getView().findViewById(R.id.spnAge);
 
 
+
     }
 
     private void genderController() {

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WHAT Eat!</string>
     <string name="title_toolber">แอพช่วยกันลด</string>
+
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+
 </resources>

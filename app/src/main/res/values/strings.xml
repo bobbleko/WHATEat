@@ -8,4 +8,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="Name">ชื่อ</string>
+    <string name="Surname">นามสกุล</string>
+    <string name="Male">ชาย</string>
+    <string name="Female">หญิง</string>
+    <string name="Age">อายุ</string>
+    <string name="Stature">ส่วนสูง</string>
+
 </resources>

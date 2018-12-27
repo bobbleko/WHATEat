@@ -9,40 +9,167 @@
 
     <!--Content-->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <!--Toolber-->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbarMain"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
         <!--Fragmant-->
         <FrameLayout
             android:id="@+id/contentFragmentMain"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
     <!--Drawer Menu-->
+
     <LinearLayout
         android:layout_gravity="start"
-        android:background="#ffffff"
-        android:orientation="vertical"
+        android:padding="10dp"
         android:layout_width="320dp"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/drawer" />
 
         <TextView
-            android:textStyle="bold"
-            android:textSize="@dimen/h1"
-            android:text="Drawer Manu :"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Manu"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold" />
+
+        <!--Home-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_action_main" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="HOME"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--About me-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_action_about_me" />
+
+            <TextView
+                android:id="@+id/txtAboutMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="ABOUT_ME"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_action_info" />
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="Infomation"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!--map-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_action_exit" />
+
+            <TextView
+                android:id="@+id/txtMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="Show Map"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--Exit-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_action_exit" />
+
+            <TextView
+                android:id="@+id/txtExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="EXIT"
+                android:textSize="@dimen/h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

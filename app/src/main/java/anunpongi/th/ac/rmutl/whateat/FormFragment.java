@@ -1,6 +1,7 @@
 package anunpongi.th.ac.rmutl.whateat;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -165,11 +166,26 @@ public class FormFragment extends Fragment {
                     myAlert.normalDialog("Non Gender","Please Choose Male or Famele");
                 } else if (ageABoolean) {
                     myAlert.normalDialog("No Choose Age ", "Plese choose Age");
+                } else {
+                    saveData();
+                    
                 }
-
-
             } //onClick
+
         });
+
+    }
+
+    private void saveData() {
+
+        MyManage myManage = new MyManage(getActivity());
+        myManage.addValueToSQLite(nameString,surnameString,genderString,ageString,statureString);
+
+
+        Intent intent = getActivity().getIntent();
+        getActivity().finish();
+        startActivity(intent);
+
     }
 
 

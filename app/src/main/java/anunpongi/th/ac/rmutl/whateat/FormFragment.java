@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -23,6 +25,9 @@ public class FormFragment extends Fragment {
 
     private String nameString, surnameString, genderString,
             ageString, statureString;
+    private boolean ageABoolean = true;
+//    true Not Choose Age
+    private boolean statureABoolean = true;
 
 
     public FormFragment() {
@@ -34,7 +39,6 @@ public class FormFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
 //        Gender Controller
         genderController();
 
@@ -44,13 +48,69 @@ public class FormFragment extends Fragment {
 //        Age Controller
         ageController();
 
+//        Stature Controller
+        statureController();
+
+
 
 
     }   //Main Methon
 
+    private void statureController() {
+        final String[] strings = new String[]{"กรุณาเลือก","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148",
+                "149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167", "168","169","170","171",
+                "172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190",};
+        Spinner spinner = getView().findViewById(R.id.spnStature);
+        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, strings);
+        spinner.setAdapter(stringArrayAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                statureString = strings[position];
+                if (!(position == 0)) {
+                    statureABoolean = false;
+                } else {
+                    statureABoolean = true;
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+
     private void ageController() {
-        String[] strings = new String[]{"0","1","2","3","4","5","6",};
+        final String[] strings = new String[]{"กรุณาเลือก","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40",
+                "41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60",
+            };
         Spinner spinner = getView().findViewById(R.id.spnAge);
+        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, strings);
+        spinner.setAdapter(stringArrayAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ageString = strings[position];
+                if (!(position == 0)) {
+                    ageABoolean = false;
+                } else {
+                    ageABoolean = true;
+                }
+
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
@@ -103,6 +163,8 @@ public class FormFragment extends Fragment {
                 } else if (!(maleRadioButton.isChecked() || famaleRedioButton.isChecked())) {
 //                    Non Choose Gerder
                     myAlert.normalDialog("Non Gender","Please Choose Male or Famele");
+                } else if (ageABoolean) {
+                    myAlert.normalDialog("No Choose Age ", "Plese choose Age");
                 }
 
 

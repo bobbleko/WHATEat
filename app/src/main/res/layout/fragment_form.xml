@@ -19,7 +19,7 @@
             <!--name-->
             <TextView
                 android:textColor="#004d40"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="16dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
                 android:text="@string/Name"
@@ -35,7 +35,7 @@
             <!--Surname-->
             <TextView
                 android:textColor="#004d40"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
                 android:text="@string/Surname"
@@ -52,7 +52,7 @@
             <!--Gender-->
             <TextView
                 android:textColor="#004d40"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
                 android:text="gender :"
@@ -92,16 +92,16 @@
                 android:textStyle="bold"
                 android:textSize="@dimen/h2"
                 android:text="@string/Age"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <Spinner
-                android:layout_marginTop="6dp"
-                android:textColor="#004d40"
                 android:id="@+id/spnAge"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#004d40" />
 
             <!--stature-->
            <TextView
@@ -109,7 +109,7 @@
                android:textStyle="bold"
                android:textSize="@dimen/h2"
                android:text="@string/Stature"
-               android:layout_marginTop="20dp"
+               android:layout_marginTop="16dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content" />
 

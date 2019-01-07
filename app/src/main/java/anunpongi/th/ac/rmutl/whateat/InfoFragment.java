@@ -44,7 +44,7 @@ public class InfoFragment extends Fragment {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABER",null);
         cursor.moveToFirst();
 
-        nameTextView.setText("Name ==>" + cursor.getString(1 ));
+        nameTextView.setText("Name ==>     " + cursor.getString(1 ));
         surnameTextView.setText(getString(R.string.Surname) + "" + cursor.getString(2));
 
         int indexGender = Integer.parseInt(cursor.getString(3));

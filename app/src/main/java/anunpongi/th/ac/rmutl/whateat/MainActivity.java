@@ -1,5 +1,6 @@
 package anunpongi.th.ac.rmutl.whateat;
 
+import android.arch.lifecycle.ViewModelStore;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //    Explicit
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private ViewModelStore viewModelStore;
 
 
     @Override
@@ -40,11 +43,25 @@ public class MainActivity extends AppCompatActivity {
 
 //        Info Controller
         infoController();
-
+//        logout Controller
+        logoutController();
 //            Exit Controller
         exitController();
 
+
+
     } //Main Method
+
+    private void logoutController() {
+        TextView textView = findViewById(R.id.txtLogout);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.contentFragmentMain, new FormFragment()).commit();
+                drawerLayout.closeDrawers();
+            }
+        });
+    }
 
     private void exitController() {
         TextView textView = findViewById(R.id.txtExit);
@@ -171,5 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 }   //Main Class

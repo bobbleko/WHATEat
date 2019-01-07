@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
     <!--Content-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,10 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+
     </LinearLayout>
 
     <!--Drawer Menu-->
-
     <LinearLayout
         android:layout_gravity="start"
         android:padding="10dp"
@@ -123,30 +127,25 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
-        <!--map-->
+        <!--logout-->
         <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_action_exit" />
-
-            <TextView
-                android:id="@+id/txtMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:clickable="true"
-                android:text="Show Map"
-                android:textSize="@dimen/h2"
-                android:textStyle="bold" />
-
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_action_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold"
+                    android:text="Logout"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
         </LinearLayout>
-
         <!--Exit-->
         <LinearLayout
             android:layout_width="match_parent"

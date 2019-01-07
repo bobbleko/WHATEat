@@ -5,29 +5,35 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-   <LinearLayout
-       android:layout_margin="30dp"
-       android:orientation="vertical"
+   <ScrollView
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+       android:layout_height="match_parent">
 
-   <VideoView
-       android:id="@+id/myVidioView"
-       android:layout_width="match_parent"
-       android:layout_height="200dp" />
-
-      <Button
-          android:text="Start"
-          android:id="@+id/btnStart"
+      <LinearLayout
+          android:layout_margin="40dp"
+          android:orientation="vertical"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+          android:layout_height="wrap_content">
 
-      <Button
-          android:text="Stop"
-          android:id="@+id/btnStop"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+         <ImageView
+             android:layout_width="300dp"
+             android:layout_height="250dp"
+             android:src="@drawable/newicons" />
 
-   </LinearLayout>
+         <Button
+             android:id="@+id/nextto"
+             android:layout_gravity="center"
+             android:layout_margin="@dimen/h2"
+             android:textStyle="bold"
+             android:textSize="@dimen/h2"
+             android:text="next"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent" />
+
+
+
+
+      </LinearLayout>
+   </ScrollView>
 
 </FrameLayout>
